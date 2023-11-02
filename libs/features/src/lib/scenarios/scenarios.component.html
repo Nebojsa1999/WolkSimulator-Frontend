@@ -1,0 +1,63 @@
+<!--<ng-container *ngIf="scenarios$ | async as scenarios">-->
+<!--    <div class="ong-content" fxFlex="1 1 auto" fxLayout="column" fxLayoutAlign="left space-between" fxLayoutGap="16px">-->
+<!--      <ong-container-view mode="embedded" scrollable="y-axis">-->
+<!--        <div class="ong-content" fxFlex="1 1 auto" fxLayout="column" fxLayoutAlign="left space-between">-->
+<!--          <mat-card class="ong-section" fxLayout="column" fxLayoutAlign="start space-between">-->
+<!--            <div fxLayout="row">-->
+<!--              <h2>{{ 'FINANCIAL.FIELD_EXPENDITURE_TOTALS_TABLE_TITLE' | translate: { currency: currency.code } }}</h2>-->
+<!--            </div>-->
+
+<!--            <table mat-table [dataSource]="scenarios.length !== 0 ? scenarios : placeholderSpecs">-->
+<!--              <ng-container matColumnDef="month">-->
+<!--                <th mat-header-cell *matHeaderCellDef>{{ 'FINANCIAL.FIELD_EXPENDITURE_TOTALS_MONTH' | translate }}</th>-->
+<!--                <td mat-cell *matCellDef="let element">-->
+<!--                  <div>{{ element.date !== null ? ('FINANCIAL.' + element.date | translate) : '-' }}</div>-->
+<!--                </td>-->
+<!--                <td mat-footer-cell *matFooterCellDef class="footer">{{ 'FINANCIAL.FIELD_EXPENDITURE_TOTALS_GRAND_TOTAL' | translate }}</td>-->
+<!--              </ng-container>-->
+
+<!--              <ng-container matColumnDef="totalOpex">-->
+<!--                <th class="text-right" mat-header-cell *matHeaderCellDef>{{ 'FINANCIAL.FIELD_EXPENDITURE_TOTALS_TOTAL_OPEX' | translate }}</th>-->
+<!--                <td class="text-right" mat-cell *matCellDef="let element">-->
+<!--                  <div>{{ element.totalOpex !== null ? (element.totalOpex | number: '1.2') : '-' }}</div>-->
+<!--                </td>-->
+<!--                <td mat-footer-cell *matFooterCellDef class="footer text-right">{{ '' + getGrandTotalForField(scenarios, 'totalOpex') | number: '1.2' || '-' }}</td>-->
+<!--              </ng-container>-->
+
+<!--              <ng-container matColumnDef="totalCapex">-->
+<!--                <th class="text-right" mat-header-cell *matHeaderCellDef>{{ 'FINANCIAL.FIELD_EXPENDITURE_TOTALS_TOTAL_CAPEX' | translate }}</th>-->
+<!--                <td class="text-right" mat-cell *matCellDef="let element">-->
+<!--                  <div>{{ element.totalCapex !== null ? (element.totalCapex | number: '1.2') : '-' }}</div>-->
+<!--                </td>-->
+<!--                <td mat-footer-cell *matFooterCellDef class="footer text-right">{{ '' + getGrandTotalForField(scenarios, 'totalCapex') | number: '1.2' || '-' }}</td>-->
+<!--              </ng-container>-->
+
+<!--              <ng-container matColumnDef="totalCost">-->
+<!--                <th class="text-right" mat-header-cell *matHeaderCellDef>{{ 'FINANCIAL.FIELD_EXPENDITURE_TOTALS_TOTAL_COST' | translate }}</th>-->
+<!--                <td class="text-right" mat-cell *matCellDef="let element">-->
+<!--                  <div>{{ element.totalCost !== null ? (element.totalCost | number: '1.2') : '-' }}</div>-->
+<!--                </td>-->
+<!--                <td mat-footer-cell *matFooterCellDef class="footer text-right">{{ '' + getGrandTotalForField(scenarios) | number: '1.2' || '-' }}</td>-->
+<!--              </ng-container>-->
+
+<!--              <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>-->
+<!--              <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>-->
+<!--              <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>-->
+<!--            </table>-->
+<!--          </mat-card>-->
+<!--          <button-->
+<!--            mat-fab-->
+<!--            color="primary"-->
+<!--            class="box-shadow-none button-wrapper"-->
+<!--            fxLayout="row"-->
+<!--            fxLayoutAlign="center center"-->
+<!--            [matTooltip]="'FINANCIAL.FIELD_EXPENDITURE_TOTALS_DOWNLOAD_DATA' | translate"-->
+<!--            matTooltipPosition="left"-->
+<!--            (click)="download()"-->
+<!--          >-->
+<!--            <mat-icon>download></mat-icon>-->
+<!--          </button>-->
+<!--        </div>-->
+<!--      </ong-container-view>-->
+<!--    </div>-->
+<!--</ng-container>-->

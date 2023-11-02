@@ -14,7 +14,15 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@wolk-simulator-frontend/api-client": [
+        "libs/rest/api-client/src/index.ts"
+      ],
+      "@wolk-simulator-frontend/commons-api": [
+        "libs/rest/commons-api/src/index.ts"
+      ],
+      "@wolk-simulator-frontend/features": ["libs/features/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
